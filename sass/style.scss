@@ -1,0 +1,130 @@
+$Primary: #9356DC;
+$Secondary: #FF79DA;
+$Third: #99E2D0;
+$Gray: #f8f8f8;
+$Light_Lavender: #efeff7;
+$Gradient_button: linear-gradient(to bottom right, $Secondary, $Primary);
+$Box_shadow: 0px 0px 20px 2px rgba(211,211,211,0.83);
+
+
+
+body {
+    box-sizing: border-box;
+    margin: 0%;
+    font-family: "Roboto";
+    
+}
+
+
+header{
+    height: 80px;
+    background-color: white;
+    
+}
+
+
+
+h1{
+    width:60%;
+    font-size: 175%;
+    margin-bottom: 0;
+}
+
+
+.Center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Logo_Header{
+    width: 100%;
+    height: 100px;
+    img{
+        width: 45%;
+        height: 40%;
+    }
+}
+  
+.Localisation {
+    height: 57px;
+    display: flex;
+    
+    
+    background: linear-gradient(to bottom,#d0d0d0 0% ,  #F0f0f0 8%);
+    justify-content: center;
+    gap: 3%;
+    align-items: center;
+    
+}
+/*#d8d8d8 0% ,  #F0f0f0 */
+
+.Reservation {
+    background-color: #f8f8f8;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding-bottom: 60px;
+}
+.Title {
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin-top:4%;
+    p{
+        width:90%;
+        font-size: 135%;
+        margin: 3% 0 8% 0 ;
+    }
+    
+}
+
+ 
+
+
+.Button_Explore{
+    font-size: 110%;
+    padding:18px;
+    color: #FFFFFF;
+    background-image: $Gradient_button;
+    border-radius: 45px;
+    border:none;
+}
+
+.Fonctionnement{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+
+    h2{
+   
+        margin-top:12%;
+        width: 80%;
+        font-size:175%;
+    }
+
+}
+ 
+
+.Option_fonctionnnement{
+
+    background-color: $Gray;
+    width: 85%;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: $Box_shadow;
+
+    &:hover{
+        background-color: $Light_Lavender;
+
+    }
+}
