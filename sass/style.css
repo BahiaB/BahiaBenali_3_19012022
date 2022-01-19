@@ -1,3 +1,30 @@
+.Restaurant_Choice .Restaurant_Choice_Card .Restaurant_Text {
+  padding: 10px 10px 0 10px;
+  line-height: 22px;
+}
+
+.Restaurant_Choice .Restaurant_Choice_Card .Restaurant_Text h3 {
+  margin: 0px;
+  font-size: 18px;
+}
+
+.Restaurant_Choice .Restaurant_Choice_Card .Restaurant_Text p {
+  font-size: 16px;
+  margin: 0px;
+}
+
+.Restaurant_Choice .Restaurant_Choice_Card .Restaurant_Text i {
+  font-size: 24px;
+}
+
+.Restaurant_Choice .Restaurant_Choice_Card .Restaurant_Text i:hover {
+  font-weight: 900;
+  cursor: pointer;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -54,7 +81,6 @@ h1 {
           align-items: center;
 }
 
-/*#d8d8d8 0% ,  #F0f0f0 */
 .Reservation {
   background-color: #f8f8f8;
   -webkit-box-pack: center;
@@ -97,6 +123,8 @@ h1 {
   color: #FFFFFF;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-box-shadow: 0px 0px 20px 2px rgba(211, 211, 211, 0.83);
+          box-shadow: 0px 0px 20px 2px rgba(211, 211, 211, 0.83);
   border-radius: 45px;
   border: none;
 }
@@ -119,14 +147,16 @@ h1 {
 }
 
 .Fonctionnement h2 {
-  margin-top: 12%;
-  width: 80%;
-  font-size: 175%;
+  margin: 40px 0 0 20px;
+  justify-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: 150%;
 }
 
 .Option_fonctionnnement {
   background-color: #f8f8f8;
-  width: 85%;
+  width: 90%;
   height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -145,5 +175,117 @@ h1 {
 
 .Option_fonctionnnement:hover {
   background-color: #efeff7;
+}
+
+.Option_fonctionnnement:hover i {
+  color: #9356DC;
+}
+
+.Circle {
+  height: 23px;
+  width: 23px;
+  margin-left: -12px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: white;
+  font-size: 13px;
+}
+
+.Restaurant_Choice {
+  margin-top: 70px;
+  padding-top: 15px;
+  background-color: #f8f8f8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 1200px;
+  gap: 20px;
+}
+
+.Restaurant_Choice h2 {
+  margin: 40px 0 0 20px;
+  justify-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: 150%;
+}
+
+.Restaurant_Choice .Restaurant_Choice_Card {
+  background-color: white;
+  height: 20%;
+  width: 90%;
+  border-radius: 15px;
+}
+
+.Restaurant_Choice .Restaurant_Choice_Card img {
+  height: 70%;
+  width: 100%;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.Restaurant_Choice .Restaurant_Choice_Card .Restaurant_Text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer {
+  background-color: rgba(32, 31, 31, 0.904);
+  height: 200px;
+  line-height: 25px;
+  color: white;
+}
+
+footer h2 {
+  font-family: "Shrikhand";
+  padding: 20px 0px 0px 20px;
+  font-size: 18px;
+  margin: 0px;
+}
+
+footer ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+footer li {
+  font-size: 15px;
+}
+
+footer .Footer_First_li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+footer .Footer_second_li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+footer .Footer_second_li i {
+  font-size: 12px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 /*# sourceMappingURL=style.css.map */
