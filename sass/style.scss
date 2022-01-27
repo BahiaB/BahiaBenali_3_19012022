@@ -3,20 +3,59 @@ $Secondary: #FF79DA;
 $Third: #99E2D0;
 $Gray: #f8f8f8;
 $Light_Lavender: #eaeaf3;
+$Underline:linear-gradient(90deg, rgba(153,226,208,1) 0%, rgba(153,226,208,1) 35%, rgba(240,240,240,1) 100%);
 $Gradient_button: linear-gradient(to bottom right, $Secondary, $Primary);
 $Box_shadow: 0px 0px 20px 2px rgba(211,211,211,0.83);
 $Box_Shadow_darker:0px 0px 20px 2px rgba(102, 100, 100, 0.7);
 
 @keyframes apparition{
     from {
-        margin-left: 100%;
-        width: 100%;
+        opacity: 0;
       }
     
       to {
-        margin-left: 0%;
-        width: 100%;
+        opacity: 1;
+        
       }
+}
+@keyframes spin {
+    from{
+        width:0;
+        opacity: 0;
+        rotate:0deg;
+        background-color: transparent;
+        
+    }
+    to{
+        
+        opacity: 1;
+        rotate:360deg;
+        width:25%;
+       background-color: $Third;
+    }
+    
+}
+
+@keyframes Ellipse{
+    from{
+        width:80%;
+
+    } 
+    to{
+        width: 60%
+    }
+}
+
+@keyframes spin2{
+    from{
+        rotate:0deg;
+        /*margin-top: 30px;*/
+
+    }
+    to{
+        rotate:360deg;
+       /* margin-top: 30px;*/
+    }
 }
 
 body {
@@ -49,22 +88,24 @@ a{
     align-items: center;
 }
 
-.Delay-1{
-    animation-delay: 0s;
-    animation-duration: 1s;
+.Delay-1, .Delay-2, .Delay-3{
     animation-name:apparition ;
+    animation-fill-mode: forwards;
+}
+
+.Delay-1{
+    animation-delay: 0.4s;
+    animation-duration: 2s;
 }
 
 .Delay-2{
-    animation-delay: 0s;
-    animation-duration: 1.4s;
-    animation-name:apparition ;
+    animation-delay: 0.8s;
+    animation-duration: 2s;
 }
 
 .Delay-3{
-    animation-delay: 0s;
-    animation-duration: 1.8s;
-    animation-name:apparition ;
+    animation-delay: 1.2s;
+    animation-duration: 2s;
 }
 
 .Delay-4{
@@ -326,11 +367,38 @@ footer{
 
 .Container{
     position: relative;
+    height: 20rem;
+    
     z-index: -1;
 }
 
 .Menu{
     background-color: $Gray;
+    padding-bottom: 3rem;
+    
+    
+        .Button_order{
+            margin-top:3rem;
+            font-size: 110%;
+            padding:15px 50px 15px 50px;
+            color: #FFFFFF;
+            background-image: $Gradient_button;
+            box-shadow: $Box_shadow;
+            border-radius: 45px;
+            border:none;
+            scale: 1;
+            transition: all 0.4s;
+           
+        
+            &:hover{
+                transform: scale(1.07);
+                opacity: 0.9;
+                box-shadow: $Box_Shadow_darker;
+                
+            }
+        
+    }
+
 }
 .Restaurant-name{
    
@@ -338,7 +406,7 @@ footer{
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    border-radius: 15px 15px 0 0;
+    border-radius: 30px 30px 0 0;
     justify-self: center;
     z-index: 0;
     margin-top : -50px;
@@ -355,31 +423,127 @@ footer{
     }
 }
 
-.Entree, .Meal{
+.Entree, .Meal, .Dessert{
    
     flex-direction: column;
     gap:1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 1.5rem;
+
 
     h3{
-        justify-self: flex-start;
-        align-self: flex-start;
-        padding-left: 1.5rem;
+        font-weight: 300;
+        margin-bottom: -10px;
+        font-size: 1.3rem;
+    }
+    .Underline{
+        height: 3px;
+        background-color: $Third;
+        width: 2.5rem;
+        
+      
     }
     
 }
+
 .Menu-card{
+    
+    opacity: 0;
+    display:flex;
     background-color: white;
     box-shadow: $Box_shadow;
     flex-direction: column;
     width: 90%;
+    //width: calc(90%);
     border-radius: 20px;
     padding-left: 1rem;
+    height:80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space: nowrap;
+
+    
+   
+    div{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .Valide{
+        
+            
+            margin-top: -35px;
+            height:80px;
+            border-radius: 0px 15px 15px 0px;
+            color: #F0f0f0;
+            font-size: 1.5rem;
+            display: inline-block;
+            text-align: center;
+                        
+            i{
+                opacity: 0;
+                
+                margin-top:30px;
+                
+               
+                
+            }
+        }
+    }
+
     h4{
-        margin:0px;
+        margin:0rem;
         padding-top: 1rem;
+        width: 90%;
     }
     p{
-        margin-top:0px;
+       margin-top:0.5rem ;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 20px;
+        width: 80%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: inline-block;
+
+    }
+    span{
+        padding-top:10px;
+        padding-right: 10px;
     }
     
+    &:hover{
+        
+        .Valide{
+            animation-name: spin;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            
+            i{
+                opacity: 1;
+                
+                transition-duration: 1500ms;
+                transform: rotate(360deg);
+            }
+        }
+            
+        p{
+            animation-name: Ellipse;
+            margin-right:30px;
+            padding-right: 20px;
+        }
+
+    }
+   
 }
+
+/*.Test{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-color: red;
+}*/
+
