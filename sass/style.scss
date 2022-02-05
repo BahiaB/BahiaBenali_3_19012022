@@ -1,7 +1,7 @@
 $Primary: #9356DC;
 $Secondary: #FF79DA;
 $Third: #99E2D0;
-$Gray: #f8f8f8;
+$Gray: #F8f8f8;
 $Light_Lavender: #eaeaf3;
 $Underline:linear-gradient(90deg, rgba(153,226,208,1) 0%, rgba(153,226,208,1) 35%, rgba(240,240,240,1) 100%);
 $Gradient_button: linear-gradient(to bottom right, $Secondary, $Primary);
@@ -48,12 +48,12 @@ $Box_Shadow_darker:0px 0px 20px 2px rgba(102, 100, 100, 0.7);
 
 @keyframes spin2{
     from{
-        rotate:0deg;
+        transform:rotate(0deg);
         
 
     }
     to{
-        rotate:360deg;
+        transform:rotate(360deg);
        
     }
 }
@@ -65,26 +65,22 @@ $Box_Shadow_darker:0px 0px 20px 2px rgba(102, 100, 100, 0.7);
     }
   } 
   
-@keyframes jump {
-    0% {
-      transform: translateY(0);
+
+@keyframes visible{
+    100%{
+        overflow: visible;
     }
-    25% {
-      transform: translateY(0.5rem);
-    }
-    75% {
-      transform: translateY(-0.5rem);
-    }
-    100% {
-      transform: translateY(0);
-    }
-   
 }
 
 body {
     box-sizing: border-box;
     margin: 0%;
     font-family: "Roboto";
+    overflow: hidden;
+    animation-name: visible;
+    animation-delay: 1.5s;
+    animation-duration: infinite;
+    animation-fill-mode: forwards;
     
 }
 
@@ -99,18 +95,24 @@ position: fixed;
   animation: loader 0.01s;
   animation-delay: 1.75s;
   animation-fill-mode: both;
-  z-index: 10000;
+  z-index: 2;
   display:flex;
   align-items:center;
   justify-content:center;
+  
 
-  &__item {
-    height: 1rem;
-    width: 1rem;
-    border-radius: 1rem;
-    animation: jump 1s;
-    background-color: $Primary;
-}
+  
+    .spin-ring{
+        display: block;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border-radius: 50%;
+        border: 0.8rem solid #fff;
+        border-color: $Primary $Secondary $Third $Gray;
+        animation: spin2 1.5s  infinite;
+    }
+    
 }
 
 
@@ -310,6 +312,8 @@ header h1{
     scale: 1;
     transition: transform 200ms;
     box-shadow: $Box_shadow;
+    position: relative;
+    
     &:hover{
         box-shadow: $Box_Shadow_darker;
         transform: scale(1.01);
@@ -320,7 +324,26 @@ header h1{
         background-position: center;
         object-fit: cover;
         border-radius: 15px 15px 0 0;
+        
          
+    }
+    .New{
+        width:6rem;
+        height: 2rem;
+        position: absolute;
+        font-size: 1.1rem;
+        border-radius: 5%;
+        color: green;
+        background-color: $Third;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-self: flex-end;
+       
+        
+        margin-left: 73%;
+        
+        margin-top: 1rem;
     }
 }
 
@@ -344,22 +367,30 @@ header h1{
     i{        
         position:absolute;
         transition: all 0.5s ;
+        font-size: 1.5rem;
+        margin-left:-20px;
+        margin-top: -15px;
     } 
             
    .Heart .Heart_1{
+        
         color: transparent;
         background-image: linear-gradient(to bottom right, $Secondary, $Primary);
         background-clip: text;
         -webkit-background-clip: text;   
         opacity:0;
+        
     }
 
     .Heart:hover .Heart_1{
         opacity: 1;
+        
+        
     }
     
     .Heart:hover .Heart_2{
         opacity: 0;
+        
     } 
        
 }    
@@ -422,7 +453,6 @@ footer{
 .Container{
     position: relative;
     height: 20rem;
-    
     z-index: -1;
 }
 
