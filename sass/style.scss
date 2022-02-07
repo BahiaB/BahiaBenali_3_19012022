@@ -1,76 +1,7 @@
-$Primary: #9356DC;
-$Secondary: #FF79DA;
-$Third: #99E2D0;
-$Gray: #F8f8f8;
-$Light_Lavender: #eaeaf3;
-$Underline:linear-gradient(90deg, rgba(153,226,208,1) 0%, rgba(153,226,208,1) 35%, rgba(240,240,240,1) 100%);
-$Gradient_button: linear-gradient(to bottom right, $Secondary, $Primary);
-$Box_shadow: 0px 0px 20px 2px rgba(211,211,211,0.83);
-$Box_Shadow_darker:0px 0px 20px 2px rgba(102, 100, 100, 0.7);
+@import 'variables';
+@import 'animations';
 
-@keyframes apparition{
-    from {
-        opacity: 0;
-      }
-    
-      to {
-        opacity: 1;
-        
-      }
-}
-@keyframes spin {
-    from{
-        width:0;
-        opacity: 0;
-        rotate:0deg;
-        background-color: transparent;
-        
-    }
-    to{
-        
-        opacity: 1;
-        rotate:360deg;
-        width:25%;
-       background-color: $Third;
-    }
-    
-}
 
-@keyframes Ellipse{
-    from{
-        width:80%;
-
-    } 
-    to{
-        width: 60%
-    }
-}
-
-@keyframes spin2{
-    from{
-        transform:rotate(0deg);
-        
-
-    }
-    to{
-        transform:rotate(360deg);
-       
-    }
-}
-
-@keyframes loader {
-    100% {
-      opacity: 0;
-      z-index: -10;
-    }
-  } 
-  
-
-@keyframes visible{
-    100%{
-        overflow: visible;
-    }
-}
 
 body {
     box-sizing: border-box;
@@ -119,13 +50,11 @@ position: fixed;
 header{
     height: 80px;
     background-color: white;
-    
 }
 
 h1{
     width:60%;
     font-size: 175%;
-    margin-bottom: 0;
 }
 
 a{
@@ -172,13 +101,10 @@ header h1{
 .Localisation {
     height: 57px;
     display: flex;
-    
-    
     background: linear-gradient(to bottom,#d0d0d0 0% ,  #F0f0f0 8%);
     justify-content: center;
     gap: 3%;
     align-items: center;
-    
 }
 
 
@@ -202,7 +128,6 @@ header h1{
         font-size: 135%;
         margin: 3% 0 8% 0 ;
     }
-    
 }
 
 .Button_Explore{
@@ -215,7 +140,6 @@ header h1{
     border:none;
     scale: 1;
     transition: all 0.4s;
-   
 
     &:hover{
         transform: scale(1.07);
@@ -223,8 +147,6 @@ header h1{
         box-shadow: $Box_Shadow_darker;
         
     }
-    
-    
 }
 
 .Fonctionnement{
@@ -235,16 +157,12 @@ header h1{
     gap:20px;
 
     h2{
-   
-        
         margin: 40px 0 0 20px;
         justify-self: flex-start;
         align-self: flex-start;
         font-size:150%;
     }
-
 }
- 
 
 .Option_fonctionnnement{
 
@@ -258,13 +176,11 @@ header h1{
     border-radius: 20px;
     box-shadow: $Box_shadow;
     
-    
     &:hover{
         background-color: $Light_Lavender;
         i{
             color: $Primary;
         }
-
     }
 }
 
@@ -277,8 +193,6 @@ header h1{
     background-color: $Primary;
     color: white;
     font-size: 13px;
-
-    
 }
 
 .Restaurant_Choice{
@@ -289,13 +203,11 @@ header h1{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 1200px;
+    margin-bottom: 2rem;
     gap: 20px;
    
 
     h2{
-   
-        
         margin: 40px 0 0 20px;
         justify-self: flex-start;
         align-self: flex-start;
@@ -306,7 +218,7 @@ header h1{
         
        
     background-color:white;
-    height:20%;
+    height:19rem;
     width: 90%;
     border-radius: 15px;
     scale: 1;
@@ -324,7 +236,6 @@ header h1{
         background-position: center;
         object-fit: cover;
         border-radius: 15px 15px 0 0;
-        
          
     }
     .New{
@@ -339,11 +250,8 @@ header h1{
         align-items: center;
         justify-content: center;
         justify-self: flex-end;
-       
-        
-        margin-left: 73%;
-        
-        margin-top: 1rem;
+        right: 3%;
+        top:6%;
     }
 }
 
@@ -356,13 +264,15 @@ header h1{
     
     
     h3{
-        margin:0px;
-        font-size: 18px;
+        margin:0.5rem;
+        font-size: 1.4rem;
     }
     
     p{
-        font-size: 16px;
+        font-size: 1.2rem;
         margin: 0px;
+        font-weight: 300;
+        margin:0.5rem;
     }
     i{        
         position:absolute;
@@ -384,8 +294,6 @@ header h1{
 
     .Heart:hover .Heart_1{
         opacity: 1;
-        
-        
     }
     
     .Heart:hover .Heart_2{
@@ -394,9 +302,6 @@ header h1{
     } 
        
 }    
-
-
-         
 
 
 footer{
@@ -445,9 +350,24 @@ footer{
 /*                      page menu                                   */
 /*********************************************************************/
 
-
-.Img-restaurant{
+.Menu-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i{
+        position: absolute;
+        left:5%;
+    }
+    h1{
+        margin-top: 0px;
+        position: relative;
+    }
+}
+img{
     width:100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
 }
 
 .Container{
@@ -478,11 +398,8 @@ footer{
                 transform: scale(1.07);
                 opacity: 0.9;
                 box-shadow: $Box_Shadow_darker;
-                
             }
-        
-    }
-
+        }
 }
 .Restaurant-name{
    
@@ -502,9 +419,28 @@ footer{
         padding-left: 1.5rem;
     }
     i{
+        font-size: 1.5rem;
         position:absolute;
-        margin: -5px 0 0px -30px; 
+        right:2.5rem;
+        top:23.5rem;
+        transition: all 0.5s ;
     }
+       
+    .Heart .Heart_1{
+        color: transparent;
+        background-image: linear-gradient(to bottom right, $Secondary, $Primary);
+        background-clip: text;
+        -webkit-background-clip: text;   
+        opacity:0;
+    }
+    .Heart:hover .Heart_1{
+        opacity: 1;
+    }
+    
+    .Heart:hover .Heart_2{
+        opacity: 0;
+    } 
+
 }
 
 .Entree, .Meal, .Dessert{
@@ -514,21 +450,24 @@ footer{
     justify-content: flex-start;
     align-items: flex-start;
     padding-left: 1.5rem;
-
-
+    width: 95%;
+    
     h3{
         font-weight: 300;
-        margin-bottom: -10px;
+        margin-bottom: 0px;
         font-size: 1.3rem;
-    }
-    .Underline{
-        height: 3px;
-        background-color: $Third;
-        width: 2.5rem;
         
-      
+        
+        &::after{
+            content:"";
+            height: 3px;
+            background-color: $Third;
+            width: 2.5rem;
+            display: flex;
+            margin-top: 0.3rem;
+            
+        }
     }
-    
 }
 
 .Menu-card{
@@ -539,7 +478,6 @@ footer{
     box-shadow: $Box_shadow;
     flex-direction: column;
     width: 90%;
-    //width: calc(90%);
     border-radius: 20px;
     padding-left: 1rem;
     height:80px;
@@ -547,7 +485,6 @@ footer{
     text-overflow: ellipsis;
     word-wrap: break-word;
     white-space: nowrap;
-
     
    
     div{
@@ -556,8 +493,6 @@ footer{
         justify-content: space-between;
 
         .Valide{
-        
-            
             margin-top: -35px;
             height:80px;
             border-radius: 0px 15px 15px 0px;
@@ -568,11 +503,7 @@ footer{
                         
             i{
                 opacity: 0;
-                
                 margin-top:30px;
-                
-               
-                
             }
         }
     }
@@ -619,15 +550,133 @@ footer{
             margin-right:30px;
             padding-right: 20px;
         }
-
     }
-   
 }
 
-/*.Test{
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    background-color: red;
-}*/
+/*************************************************************/
+/*                      Tablette Version                     */
+/*************************************************************/
 
+
+/*---------------------index-----------------*/
+@media screen and (min-width:767px){
+   .Restaurant_Choice{
+       display: flex;
+       justify-content: space-around;
+       align-items: center;
+       flex-direction: row;
+       height: auto;
+       width: 100%;
+       flex-wrap: wrap;
+       h2{
+           width: 100%;
+       }
+       .Restaurant_Choice_Card{
+           width: 45%;
+           height: 15rem;
+           .Restaurant_Name{
+               margin-top: -10px;
+           }
+       }
+   }
+
+/*---------------------Menu page-----------------*/
+    .Container{
+        position: relative;
+        height: 24rem;
+        z-index: -1;
+        .Img-restaurant{
+            object-position: center;
+        }
+   
+    }
+    .Restaurant-name{
+        i{
+            font-size: 1.5rem;
+            position:absolute;
+            right:3rem;
+            top:27.5rem;
+            transition: all 0.5s ;
+        }
+    }
+    .Menu{
+    
+        
+        .Entree, .Meal, .Dessert{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+           
+            h3{
+                width:100%;
+            }
+            
+            .Menu-card{
+                width: 44%;
+            }
+        }
+    }
+}   
+/*************************************************************/
+/*                      Desktop Version                      */
+/*************************************************************/
+
+/*---------------------index-----------------*/
+
+@media screen and (min-width:992px){
+ 
+    .Fonctionnement{
+        
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        h2{
+            width: 100%;
+        }
+       .Option_fonctionnnement{
+           width: 30%;
+       }
+    }
+
+    /*---------------------Menu page-----------------*/
+    .Container{
+        position: relative;
+        height: 24rem;
+        z-index: -1;
+        .Img-restaurant{
+            object-fit:bottom;
+        }
+       
+    }
+    
+    
+    .Menu{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .Entree, .Meal, .Dessert{
+            justify-content: baseline;
+            align-content: baseline;
+            width: 30%;
+
+            .Menu-card{
+                width: 95%;
+            }
+
+        }
+        
+        .Order_Btn{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+ 
+
+
+ 
