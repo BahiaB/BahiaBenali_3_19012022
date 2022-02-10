@@ -10,7 +10,6 @@ body {
     overflow: hidden;
     animation-name: visible;
     animation-delay: 1.5s;
-    animation-duration: infinite;
     animation-fill-mode: forwards;
     
 }
@@ -140,7 +139,6 @@ header h1{
     box-shadow: $Box_shadow;
     border-radius: 45px;
     border:none;
-    scale: 1;
     transition: all 0.4s;
 
     &:hover{
@@ -227,7 +225,6 @@ header h1{
     height:18rem;
     width: 90%;
     border-radius: 15px;
-    scale: 1;
     transition: transform 200ms;
     box-shadow: $Box_shadow;
     position: relative;
@@ -402,7 +399,6 @@ img{
             box-shadow: $Box_shadow;
             border-radius: 45px;
             border:none;
-            scale: 1;
             transition: all 0.4s;
            
         
@@ -658,10 +654,6 @@ img{
         position: relative;
         height: 24rem;
         z-index: -1;
-        .Img-restaurant{
-            object-fit:bottom;
-        }
-       
     }
     
     
@@ -670,7 +662,7 @@ img{
         flex-direction: row;
         flex-wrap: wrap;
         .Entree, .Meal, .Dessert{
-            justify-content: baseline;
+            justify-content: flex-start;
             align-content: baseline;
             width: 30%;
 
