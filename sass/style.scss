@@ -52,10 +52,7 @@ header{
     background-color: white;
 }
 
-h1{
-    width:60%;
-    font-size: 175%;
-}
+
 
 a{
     text-decoration: none;
@@ -95,7 +92,7 @@ a{
   
 header h1{
     font-family: "Shrikhand";
-    font-size: 2.56rem;
+    font-size: 2.4rem;
     width: auto;
 }
 .Localisation {
@@ -125,8 +122,13 @@ header h1{
     margin-top:4%;
     p{
         width:90%;
-        font-size: 135%;
+        font-size: 120%;
         margin: 3% 0 8% 0 ;
+        font-weight: 100;
+    }
+    h2{
+        width:70%;
+        font-size: 150%;
     }
 }
 
@@ -157,7 +159,7 @@ header h1{
     gap:20px;
 
     h2{
-        margin: 40px 0 0 20px;
+        margin: 40px 0 15px 20px;
         justify-self: flex-start;
         align-self: flex-start;
         font-size:150%;
@@ -175,6 +177,10 @@ header h1{
     align-items: center;
     border-radius: 20px;
     box-shadow: $Box_shadow;
+    i{
+        color:grey;
+        font-size: 1.2rem;
+    }
     
     &:hover{
         background-color: $Light_Lavender;
@@ -218,25 +224,31 @@ header h1{
         
        
     background-color:white;
-    height:19rem;
+    height:18rem;
     width: 90%;
     border-radius: 15px;
     scale: 1;
     transition: transform 200ms;
     box-shadow: $Box_shadow;
     position: relative;
+   
     
     &:hover{
         box-shadow: $Box_Shadow_darker;
         transform: scale(1.01);
     }
     img{
-        height: 70%;
+        height: 72%;
         width:100%;
-        background-position: center;
-        object-fit: cover;
+        object-fit:cover;
+        object-position:0% 60%;
         border-radius: 15px 15px 0 0;
          
+    }
+    #img-note-enchantee{
+        object-fit: cover;
+        object-position: 0% 50%;
+       
     }
     .New{
         width:6rem;
@@ -357,9 +369,9 @@ footer{
     i{
         position: absolute;
         left:5%;
+        top:5%;
     }
     h1{
-        margin-top: 0px;
         position: relative;
     }
 }
