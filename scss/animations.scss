@@ -12,16 +12,13 @@
     from{
         width:0;
         opacity: 0;
-        //rotate:0deg;
         background-color: transparent;
         
     }
     to{
-        
         opacity: 1;
-        //rotate:360deg;
         width:25%;
-       background-color: $Third;
+        background-color: $Third;
     }
     
 }
@@ -39,12 +36,9 @@
 @keyframes spin2{
     from{
         transform:rotate(0deg);
-        
-
     }
     to{
         transform:rotate(360deg);
-       
     }
 }
 

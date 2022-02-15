@@ -123,6 +123,16 @@ body {
 }
 
 .loader {
+  /*************************Loader************************/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: fixed;
   height: 100%;
   width: 100%;
@@ -136,15 +146,6 @@ body {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   z-index: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .loader .spin-ring {
@@ -182,6 +183,7 @@ a {
 }
 
 .Delay-1, .Delay-2, .Delay-3, .Delay-4 {
+  /***********Animation apparition menu card********/
   -webkit-animation-name: apparition;
           animation-name: apparition;
   -webkit-animation-fill-mode: forwards;
@@ -236,6 +238,11 @@ header h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.Localisation .input-localisation {
+  border: none;
+  background-color: #f0f0f0;
 }
 
 .Reservation {
@@ -303,6 +310,7 @@ header h1 {
 }
 
 .Fonctionnement {
+  /***************** Section "Fonctionnement"***************/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -328,6 +336,7 @@ header h1 {
 }
 
 .Option_fonctionnnement {
+  /*********************"Fonctionnement" Card ***************/
   background-color: #F8f8f8;
   width: 90%;
   height: 80px;
@@ -370,6 +379,7 @@ header h1 {
 }
 
 .Restaurant_Choice {
+  /************** Section Restaurant ************/
   margin-top: 70px;
   padding-top: 15px;
   background-color: #F8f8f8;

@@ -14,23 +14,21 @@ body {
     
 }
 
-.loader{
-
-position: fixed;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  background-color: rgba(255, 255, 255, 0.90);
-  animation: loader 0.01s;
-  animation-delay: 1.75s;
-  animation-fill-mode: both;
-  z-index: 2;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  
-
+.loader{ /*************************Loader************************/
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.90);
+    animation: loader 0.01s;
+    animation-delay: 1.75s;
+    animation-fill-mode: both;
+    z-index: 2;
+    
   
     .spin-ring{
         display: block;
@@ -42,9 +40,7 @@ position: fixed;
         border-color: $Primary $Secondary $Third $Gray;
         animation: spin2 1.5s  infinite;
     }
-    
 }
-
 
 header{
     height: 80px;
@@ -63,7 +59,7 @@ a{
     align-items: center;
 }
 
-.Delay-1, .Delay-2, .Delay-3, .Delay-4{
+.Delay-1, .Delay-2, .Delay-3, .Delay-4{/***********Animation apparition menu card********/
     animation-name:apparition ;
     animation-fill-mode: forwards;
 }
@@ -101,6 +97,11 @@ header h1{
     justify-content: center;
     gap: 3%;
     align-items: center;
+    .input-localisation{
+        border:none;
+        background-color: #f0f0f0;
+
+    }
 }
 
 
@@ -149,7 +150,7 @@ header h1{
     }
 }
 
-.Fonctionnement{
+.Fonctionnement{/***************** Section "Fonctionnement"***************/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -164,7 +165,7 @@ header h1{
     }
 }
 
-.Option_fonctionnnement{
+.Option_fonctionnnement{/*********************"Fonctionnement" Card ***************/
 
     background-color: $Gray;
     width: 90%;
@@ -199,7 +200,7 @@ header h1{
     font-size: 13px;
 }
 
-.Restaurant_Choice{
+.Restaurant_Choice{/************** Section Restaurant ************/
 
     margin-top: 70px;
     padding-top: 15px;
@@ -271,12 +272,10 @@ header h1{
     padding:10px 20px 0 10px;
     line-height: 22px;
     
-    
     h3{
         margin:0.5rem;
         font-size: 1.4rem;
     }
-    
     p{
         font-size: 1.2rem;
         margin: 0px;
@@ -290,7 +289,6 @@ header h1{
         margin-left:-20px;
         margin-top: -15px;
     } 
-            
    .Heart .Heart_1{
         
         color: transparent;
@@ -300,16 +298,13 @@ header h1{
         opacity:0;
         
     }
-
     .Heart:hover .Heart_1{
         opacity: 1;
     }
-    
     .Heart:hover .Heart_2{
         opacity: 0;
         
     } 
-       
 }    
 
 
@@ -372,6 +367,7 @@ footer{
         position: relative;
     }
 }
+
 img{
     width:100%;
     height: 100%;
@@ -547,7 +543,6 @@ img{
             
             i{
                 opacity: 1;
-                
                 transition-duration: 1500ms;
                 transform: rotate(360deg);
             }
